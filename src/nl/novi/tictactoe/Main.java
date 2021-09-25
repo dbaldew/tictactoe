@@ -12,12 +12,13 @@ public class Main {
         //welkom boodschap
         System.out.println("\nWelkom bij het spel Boter, Kaas & Eieren!\n");
 
-        //maak een bord
+        //maak een 'bord' array, deze gaat zo in de printbord methode als input
         Field [] board = new Field[9];
         for (int i = 0; i < 9; i++) {
             board[i] = new Field(Integer.toString(i));
             //System.out.println(board[i]);
         }
+
         //print board
         printBoard(board);
 
@@ -37,7 +38,7 @@ public class Main {
         //while loop , herhaal stappen tot er een winnaar is
         while (!hasWon){
 
-            //geef de speler de mogelijkheid een X te zetten
+            //geef de speler de mogelijkheid een X of O  te zetten
             System.out.println("\nGeef het veld aan waar een "+ game.getCurrentPlayer().getName()+" moet komen te staan");
 
             //input player
@@ -86,55 +87,6 @@ public class Main {
             }
         }
     }
-
-//    // oude switch player methode - nu in player class opgenomen
-//    public static Player switchPlayer (Player currentPlayer, Player playerA, Player playerB){
-//        if (currentPlayer.getToken() == "X"){
-//            return playerB;
-//        }
-//        else {
-//            return playerA;
-//        }
-//    }
-
-    // oude methode winconditie - nu in game class opgenomen
-//    public static boolean hasPlayerWon (String[] board, String currentPlayer) {
-//
-//        //horizontaal
-//        if (board[0] == currentPlayer && board[1] == currentPlayer && board[2] == currentPlayer) {
-//            return true;
-//        }
-//        if (board[3] == currentPlayer && board[4] == currentPlayer && board[5] == currentPlayer) {
-//            return true;
-//        }
-//        if (board[6] == currentPlayer && board[7] == currentPlayer && board[8] == currentPlayer) {
-//            return true;
-//        }
-//
-//        //verticaal
-//        if (board[0] == currentPlayer && board[3] == currentPlayer && board[6] == currentPlayer) {
-//            return true;
-//        }
-//        if (board[1] == currentPlayer && board[4] == currentPlayer && board[7] == currentPlayer) {
-//            return true;
-//        }
-//        if (board[2] == currentPlayer && board[5] == currentPlayer && board[8] == currentPlayer) {
-//            return true;
-//        }
-//
-//        //diagonaal
-//        if (board[0] == currentPlayer && board[4] == currentPlayer && board[8] == currentPlayer) {
-//            return true;
-//        }
-//        if (board[2] == currentPlayer && board[4] == currentPlayer && board[6] == currentPlayer) {
-//            return true;
-//        }
-//
-//        //geen winnaar
-//        return false;
-//
-//    }
-
 }
 
 

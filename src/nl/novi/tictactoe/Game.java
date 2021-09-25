@@ -13,7 +13,6 @@ public class Game {
         this.currentPlayer = playerA;
     }
 
-
     //methods
     //switchplayer methode heeft geen input meer nodig, want (Player currentPlayer, Player playerA, Player playerB)
     //staan al binnen deze klasse
@@ -30,8 +29,7 @@ public class Game {
             currentPlayer = playerA;
         }
     }
-    //origine winconditie was met een string, maar currentPlayer is nu een object. Met getToken kun je weer bij die waarde komen.
-    //Nieuwe bord bestaat uit fields en niet uit strings
+
     public boolean hasPlayerWon (Field[] board){
 
         String currentPlayerToken = currentPlayer.getToken();

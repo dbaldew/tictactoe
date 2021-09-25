@@ -7,20 +7,21 @@ public class Field {
     private Boolean isOccupied;
 
     //constructors
-    public Field (String token){
+    public Field(String token) {
         this.token = token;
         this.isOccupied = false;
     }
 
     //methods/functions
-    public void setToken (String token){
-        if (isOccupied == false){
+    public void setToken(String token) {
+        if (isOccupied == false) {
             this.token = token;
         }
         isOccupied = true;
     }
 
-    public  String getToken(){
+    //getter
+    public String getToken() {
         return token;
     }
 
